@@ -1,0 +1,36 @@
+.blog-card {
+    display: flex;    
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+
+  }
+  
+  .blog-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 3rem;
+    border: 1px solid #333;
+    border-radius: 5px;
+  }
+  
+  .blog-details {
+    flex: 1;
+  }
+  
+  .blog-details h2 {
+    margin-top: 0;
+  }
+  
+  .blog-details p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .blog-date {
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+  

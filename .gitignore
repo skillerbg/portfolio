@@ -1,0 +1,11 @@
+node_modules
+build
+npm-debug.log
+.nyc
+.env
+.DS_Store
+test.js
+files
+indexed_files
+query2.js
+app.js

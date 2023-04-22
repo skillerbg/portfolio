@@ -1,0 +1,41 @@
+/* Navbar.css */
+.navbar {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    min-width: 100%;
+    padding: 1rem 5rem;
+    box-sizing: border-box;
+  }
+  
+  .name {
+    padding-left: 5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 50%;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+.nav-links a {
+font-size: 1.2rem;
+font-weight: 600;
+color: white;
+text-decoration: none;
+margin-left: 2rem;
+padding-bottom: 0.5rem;
+border-bottom: 2px solid transparent;
+}
+.nav-links a:hover {
+  color: #654193;
+}
+  

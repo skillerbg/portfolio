@@ -1,0 +1,21 @@
+.footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    padding-bottom: 2.5rem;
+  }
+  
+  
+  .footer p {
+    padding: 0 !important;
+
+    margin: 0;
+  }
+  .container p{
+  text-align: center !important;
+
+  }
+  
