@@ -71,7 +71,7 @@ export default function Home() {
       redirect: 'follow'
     };
 
-    const response = await fetch("http://localhost:3000/ask", requestOptions);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/ask`, requestOptions);
     const result = await response.json();
 
     // Add the server's response message to the messages state variable

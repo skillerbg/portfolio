@@ -20,11 +20,12 @@ app.use(cors());
 app.post("/ask", async (req, res) => {
 
   try {
- 
+    const gptModel="gpt-3.5-turbo";//Can change to gpt-4
     const chatArray = req.body.chat;
     const question = chatArray[chatArray.length - 1].content;
     const chat = new ChatOpenAI({
       temperature: 0,
+      model: gptModel
     });
 
     
