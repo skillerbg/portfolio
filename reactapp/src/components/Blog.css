@@ -1,3 +1,12 @@
+.blogContainer{
+  height: 100%;
+  width: 70%;
+
+  background-color: transparent;
+
+  margin: 0 auto;
+
+}
 .blog-card {
     display: flex;    
     align-items: center;
@@ -34,3 +43,12 @@
     font-size: 0.8rem;
   }
   
+  @media (max-width: 480px) {
+    .blogContainer{
+      width: 100%;
+    }
+    .blog-card{
+      flex-direction: column;
+      
+    }
+  }

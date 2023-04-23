@@ -68,3 +68,11 @@
     text-align: center;
   }
   
+  @media (max-width: 480px) {
+    .contactContainer {
+      min-width: 80vw;
+    }
+    .contactContainer .formGroup {
+      width: 100%;
+    }
+  }

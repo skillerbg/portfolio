@@ -1,41 +1,110 @@
 /* Navbar.css */
 .navbar {
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    min-width: 100%;
-    padding: 1rem 5rem;
-    box-sizing: border-box;
-  }
-  
-  .name {
-    padding-left: 5rem;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    max-width: 50%;
-    font-family: 'Open Sans', sans-serif;
-  }
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  min-width: 100%;
+  padding: 1rem 5rem;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.name {
+  padding-left: 5rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  max-width: 50%;
+  font-family: 'Open Sans', sans-serif;
+}
 
 .nav-links a {
-font-size: 1.2rem;
-font-weight: 600;
-color: white;
-text-decoration: none;
-margin-left: 2rem;
-padding-bottom: 0.5rem;
-border-bottom: 2px solid transparent;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-left: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid transparent;
 }
+
 .nav-links a:hover {
   color: #654193;
 }
-  
+
+.nav-links a.active {
+  border-bottom: 2px solid #654193;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+/* Navbar.css */
+/* ... existing styles ... */
+
+/* Hide the menu on mobile and show the hamburger icon */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #222020;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  .name{
+    padding-left: 0;
+  }
+
+  .navbar{
+    padding: 20px;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+ 
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* Show the menu and hide the hamburger icon on larger screens */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  .navbar {
+    padding: 1rem 5rem;
+    margin-bottom: 0;
+  }
+  .nav-links {
+    display: flex;
+  }
+}

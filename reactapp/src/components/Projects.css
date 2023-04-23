@@ -38,3 +38,8 @@
     font-size: 1rem;
    
   }
+  @media (max-width: 480px) {
+    .projectsContainer{
+      width: 100%;
+    }
+  }

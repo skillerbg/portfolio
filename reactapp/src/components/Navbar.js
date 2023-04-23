@@ -1,50 +1,48 @@
-// Navbar.js
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'; // import the Navbar.css file
+import './Navbar.css';
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
 
+    const toggleMenu = () => {
+      setMenuOpen(!menuOpen);
+    };
+  
+    const closeMenu = () => {
+      setMenuOpen(false);
+    };
 
-    return (
-        <nav className="navbar">
-            <div className="name">Yonko Lozanov</div>
-            <div className="nav-links">
-                <NavLink exact="true" to="/" activeclassname="active">Home</NavLink>
-                <NavLink to="/projects" activeclassname="active">Projects</NavLink>
-                <NavLink to="/education" activeclassname="active">Education</NavLink>
-                <NavLink to="/blog" activeclassname="active">Blog</NavLink>
-                <NavLink to="/about" activeclassname="active">About</NavLink>
-                <NavLink to="/contact" activeclassname="active">Contact</NavLink>
-            </div>
-        </nav>
-    );
-};
-const styles = {
-    navStyle: {
-        
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        background: 'transparent',
-        width: '100%',
-
-    },
-    navLinksStyle: {
-        padding: '1rem',
-        paddingRight: '5rem',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        flexGrow: 1,
-        maxWidth: '50%',
-    },
-    nameStyle: {
-        paddingLeft: '5rem',
-        fontSize: '1.4rem',
-        fontWeight: 'bold',
-        color: 'white',
-    },
+  return (
+    <nav className="navbar">
+      <div className="name">Yonko Lozanov</div>
+      <div className={`nav-links${menuOpen ? ' open' : ''}`}>
+        <NavLink exact="true" to="/" activeClassName="active" onClick={closeMenu}>
+          Home
+        </NavLink>
+        <NavLink to="/projects" activeClassName="active" onClick={closeMenu}>
+          Projects
+        </NavLink>
+        <NavLink to="/education" activeClassName="active" onClick={closeMenu}>
+          Education
+        </NavLink>
+        <NavLink to="/blog" activeClassName="active" onClick={closeMenu}>
+          Blog
+        </NavLink>
+        <NavLink to="/about" activeClassName="active" onClick={closeMenu}>
+          About
+        </NavLink>
+        <NavLink to="/contact" activeClassName="active" onClick={closeMenu}>
+          Contact
+        </NavLink>
+      </div>
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
