@@ -7,6 +7,7 @@ import Education from './components/Education';
 import Blog from './components/Blog';
 import About from './components/About';
 import Contact from './components/Contact';
+import Post from './components/Post';
 import './App.css';
 import Footer from './components/Footer'; // import the Footer component
 import 'font-awesome/css/font-awesome.min.css';
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/:id" element={<Post />} />
       </Routes>
       <Footer />
 

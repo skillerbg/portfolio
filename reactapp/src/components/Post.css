@@ -1,0 +1,64 @@
+.pageContainer {
+    flex-grow: 1;
+    width: 100%;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .postContainer {
+    width: 80%;
+    max-width: 800px;
+    background-color: #282a36;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    color: #f8f8f2;
+  }
+  
+  .postContainer h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #f8f8f2;
+    margin-bottom: 16px;
+  }
+  
+  .postContainer h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #999999;
+    margin-bottom: 16px;
+  }
+  
+  .postContainer p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #f8f8f2;
+    margin-bottom: 24px;
+    text-indent: 1.5em;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+  }
+  
+  .postContainer hr {
+    border: 0;
+    border-top: 1px solid #444444;
+    margin: 16px 0;
+  }
+  
+  /* For tablets */
+  @media (max-width: 768px) {
+    .postContainer {
+      width: 90%;
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 480px) {
+    .postContainer {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  

@@ -9,8 +9,11 @@ height: 100vh;
 width: 95vw;
 
 }
+html {
+  height: 100%;
+}
 body {
-
+  height: 100%;
   background-color: #222020;
   margin: 0;
   padding: 0;
@@ -67,12 +70,16 @@ h1 + hr {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
+
 }
 
 .col-md-6 {
-  width: 300px;
+  width: 100%;
   padding: 0.5rem;
-  flex: 1 0 300px;
+  flex: 1 0 30%;
+  max-width: 33%;
+
   border-radius: 1rem;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 
@@ -328,6 +335,7 @@ justify-content: space-between;
 /* For tablets */
 @media (max-width: 768px) {
   .col-md-6 {
+    
     width: 100%;
     flex: 1 0 100%;
   }
@@ -339,7 +347,7 @@ justify-content: space-between;
 /* For mobile devices */
 @media (max-width: 480px) {
   #root{
-    height: 100vh;
+    height: 100%;
 width: 100%;
   }
   nav a {
@@ -350,10 +358,37 @@ width: 100%;
   h1 {
     font-size: 1.5rem;
   }
-
+  .chatContainervisible{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+  }
+    .navbar{
+      margin: 0;
+    }
+    
+    .pageContainer{
+      padding: 0 0.5rem;
+    }
   .chatContainer, .chatContainervisible {
     width: 100%;
     height: 100%;
     padding: 0.5rem;
+
+  }
+  .message.visible {  
+    max-width: 90%;    
+  }
+  .code-box {   
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .col-md-6 {
+    
+    width: 100%;
+    max-width: 100%;
   }
 }

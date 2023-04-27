@@ -5,10 +5,23 @@ const Projects = () => {
     const projects = [
         {
             title: 'Beron AI',
-            image: 'https://beronai.com/images/logo2.png',
+            image: require('../images/beronai-logo.png'),
             description: 'Beron AI is an AI-based question answering app that is optimized to understand the Bulgarian language. Allows users to ask a wide range of questions in Bulgarian in text or voice form.',
             url: 'https://play.google.com/store/apps/details?id=com.beronai'
+        } ,
+        {
+            title: 'CallGPT',
+            image: require('../images/callgpt_logo.png'),
+            description: `CallGPT is a browser extension that allows you to mimic a real voice conversation with OpenAI's GPT-4/GPT-3.5-turbo. By providing your OpenAI API key, you can engage in a voice call experience with an AI right from your browser. Your API key is securely stored in your browser's storage and is not accessible by anyone else.`,
+            url: 'https://github.com/skillerbg/callgpt'
         },
+        {
+            title: 'BotMingle',
+            image: require('../images/botminglelogo-square.png'),
+            description: `Comming soon.`,
+            url: 'http://botmingle.com'
+        },
+
         {
             title: 'Nutrition planner',
             image: require('../images/nutritionLogo.png')
@@ -21,10 +34,8 @@ const Projects = () => {
             description: 'This is a web-based platform that enables users to compose reviews about multiple brands. The brands can be sorted and evaluated using various criteria, such as the reviewer\'s gender, age, education, employment status, and more. Additionally, users have the option to suggest new brands to the platform.',
             url: 'https://github.com/skillerbg/Brands'
         },
-        { title: 'Project 4', image: 'https://via.placeholder.com/300x300', description: 'Etiam at neque sit amet lectus bibendum mollis vel eu augue. Quisque eget ex eu turpis interdum lobortis.', url: '#' },
-        { title: 'Project 5', image: 'https://via.placeholder.com/300x300', description: 'Proin consequat lacus quis elit euismod malesuada. Nullam a felis in quam aliquam eleifend. ', url: '#' },
-        { title: 'Project 6', image: 'https://via.placeholder.com/300x300', description: 'Duis malesuada erat non faucibus dictum. Nulla ut ante pharetra, hendrerit diam eu, bibendum tortor.', url: '#' },
-    ];
+       
+     ];
 
     return (<div className="pageContainer">
 

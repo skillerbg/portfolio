@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-
 import { PineconeClient } from "@pinecone-database/pinecone";
 import * as dotenv from "dotenv";
 import { VectorDBQAChain } from "langchain/chains";
@@ -9,6 +8,7 @@ import { OpenAI } from "langchain/llms";
 import { PineconeStore } from "langchain/vectorstores";
 import { ChatOpenAI } from "langchain/chat_models";
 import { HumanChatMessage, SystemChatMessage, AIChatMessage } from "langchain/schema";
+import path from "path";
 
 dotenv.config();
 const app = express();
@@ -17,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
+
 app.post("/ask", async (req, res) => {
 
   try {
@@ -130,6 +131,11 @@ app.post("/ask", async (req, res) => {
     res.status(500).send({ error: "An error occurred while processing your question." });
   }
 });
+// app.use(express.static(path.join(__dirname, '../reactapp/build')));
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../reactapp/build', 'index.html'));
+// });
+
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });

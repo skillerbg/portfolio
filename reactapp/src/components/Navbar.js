@@ -3,19 +3,23 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-      setMenuOpen(!menuOpen);
-    };
-  
-    const closeMenu = () => {
-      setMenuOpen(false);
-    };
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
-      <div className="name">Yonko Lozanov</div>
+      <NavLink exact="true" to="/" activeClassName="active" onClick={closeMenu}>
+        <div className="name">
+          Yonko Lozanov
+        </div>
+      </NavLink>
       <div className={`nav-links${menuOpen ? ' open' : ''}`}>
         <NavLink exact="true" to="/" activeClassName="active" onClick={closeMenu}>
           Home
